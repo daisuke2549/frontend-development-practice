@@ -14,3 +14,13 @@ header{
 .form-group{
     margin-top: 10px;
 }
+.btn{
+    margin-top: 10px;
+}
+
+.form-group > label{
+    font-weight: bold;
+}
+.badge-primary{
+   margin-left: 5px;
+}
