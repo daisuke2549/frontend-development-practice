@@ -5,13 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>frontend-development-practice</title>
+    <link rel="stylesheet" href="./css/sanitize.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<h1>入会申し込み</h1>
-<p>入会するには、次のフォームに必要事項をご記入ください。</p>
-<p>メールアドレス: <input type="email" name ="mymail"></p>
-<button type ="submit">送信ボタン</button>
-<input type="submit" value="送信">
-    
+<div class ="content"> 
+    <h1>入会申し込み</h1>
+    <p>入会するには、次のフォームに必要事項をご記入ください。</p>
+    <div class="control"> 
+      <label for="mymail"><p>メールアドレス <span class="required">必須</span></label>
+      <input id ="mymail" type="email" name ="mymail">
+      <label for="password">パスワード　<span class="required">必須</span</label>
+      <input id ="password" type="password" name ="password">
+    </div>
+    <div class="control">
+    <button type ="submit">登録する</button>
+    <!-- <input type="submit" value="送信">
+    -->
+    </div>
+</div>
 </body>
 </html>
