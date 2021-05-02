@@ -1,5 +1,5 @@
 @import url(sanitize.css);
-
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 body{
     background-color: #f0f0f0;
@@ -24,6 +24,7 @@ header h1{
     font-size: 24px;
     font-weight: normal;
     text-align: center;
+    font-family: 'Sriracha', cursive;
 }
 .description{
     clear: left;
@@ -84,4 +85,8 @@ header h1{
 a{
     color:#666;
     text-decoration: none;
+}
+
+footer{
+    text-align: center;
 }
