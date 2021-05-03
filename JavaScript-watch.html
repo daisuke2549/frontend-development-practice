@@ -16,10 +16,20 @@
     <div class="container">
        <script>
         var today = new Date();
-        var newYear = new Date(2019, 1, 1);
-        document.write('<p>今日は、' + today.getDate() + '日です</p>');
-        document.write('<p>元旦は、' + newYear.getDate() + 'です</p>');
-        document.write (Math.abs(-100));
+        var todayHtml = today.getFullYear() + '/' + (today.getMonth()
+        +1)+'/' + today.getDate();
+
+        document.write('<p class = "date">' +todayHtml+ '</p>')
+
+
+        // var newYear = new Date(2019, 1, 1);
+        // document.write('<p>今日は、' + today.getDate() + '日です</p>');
+        // document.write('<p>元旦は、' + newYear.getDate() + 'です</p>');
+        // document.write (Math.abs(-100));
+        var today = new Date();
+        var year = today.getFullYear();
+        document.write(year);
+        //getFullYearは日付の年を返す関数
        </script>
     </div>
 </body>
