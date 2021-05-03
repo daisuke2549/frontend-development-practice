@@ -19,27 +19,56 @@
         </div>
     </div>
 
+    <!-- <button id="btn">ボタン</button> -->
+
 <script> 
     //0を追加する
-    var addZero = function(value){    //addZeroという変数を宣言
-        if(value < 10){   //< = 比較演算子
-            value = '0' + value;
-        }
-        return value;　　//返り値、戻り値
+    // var addZero = function(value){    //addZeroという変数を宣言
+    //     if(value < 10){   //< = 比較演算子
+    //         value = '0' + value;
+    //     }
+    //     return value;　　//返り値、戻り値
+    // }
+     
+    // document.getElementById('start_stop').addEventListener('click', 
+    // function(){
+
+    
+    //     var now = new Date();
+    //     var seconds = now.getSeconds();
+    //     seconds = addZero(seconds);
+
+    //     var minutes = now.getMinutes();
+    //     minutes = addZero(minutes);
+
+    //     var hours = now.getHours();
+    //     hours = addZero(hours);
+    //     document.getElementById('timer').innerHTML = hours + ':' + minutes + ':' + seconds;
+    // });
+
+
+
+    // var btn = document.getElementById('btn');
+
+    // btn.addEventListener('click', function(){
+    //        console.log('this is clicked')
+    // },false);
+
+    document.getElementById('start_stop').addEventListener
+    ('click', function(){
+        var start = new Date();
+
+        setInterval(goTimer, 100);   //setIntervalで特定の処理を一定時間繰り返す
+    });
+
+    var goTimer = function(){
+        var now = new Date();
+
+        document.getElementById('timer').innerHTML = 
+        now.getTime();
     }
+    
 
-
-
-    var now = new Date();
-    var seconds = now.getSeconds();
-    seconds = addZero(seconds);
-
-    var minutes = now.getMinutes();
-    minutes = addZero(minutes);
-
-    var hours = now.getHours();
-    hours = addZero(hours);
-    document.getElementById('timer').innerHTML = hours + ':' + minutes + ':' + seconds;
 </script>
 </body>
 </html>
