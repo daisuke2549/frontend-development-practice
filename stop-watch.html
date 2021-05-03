@@ -10,6 +10,8 @@
 </head>
 <body>
     <div class="container">
+
+        <p id="timer">00:00:00</p>
     
         <div>   
           <button id="start_stop" class="btn btn-lg 
@@ -18,8 +20,12 @@
     </div>
 
 <script>
-    document.write('<p id="timer">00:00:00</p>');
-    document.getElementById('timer').innerHTML =  '00:00::01'
+    var now = new Date();
+    var seconds = now.getSeconds();
+    if(seconds < 10){   //< = 比較演算子
+    seconds = '0' + seconds;
+    }
+    document.getElementById('timer').innerHTML =  seconds;
 </script>
 </body>
 </html>
