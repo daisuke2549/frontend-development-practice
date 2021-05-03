@@ -14,23 +14,6 @@
     box-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
 }
 
-.box{
-    margin-top: 100px;
-    text-align: center;
+.comment{
+    margin-top:10px;
 }
-
-/* 
-.box1{
-    width:100px;
-    background-color: blue;
-    margin: 0 auto;
-    color:white;
-    padding-top: 20px;
-}
-.box2{
-    width:100px;
-    background-color: red;
-    margin: 50px auto 0;
-    color:white;
-    padding-bottom: 60px;
-} */
