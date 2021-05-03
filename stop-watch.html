@@ -19,13 +19,27 @@
         </div>
     </div>
 
-<script>
+<script> 
+    //0を追加する
+    var addZero = function(value){    //addZeroという変数を宣言
+        if(value < 10){   //< = 比較演算子
+            value = '0' + value;
+        }
+        return value;　　//返り値、戻り値
+    }
+
+
+
     var now = new Date();
     var seconds = now.getSeconds();
-    if(seconds < 10){   //< = 比較演算子
-    seconds = '0' + seconds;
-    }
-    document.getElementById('timer').innerHTML =  seconds;
+    seconds = addZero(seconds);
+
+    var minutes = now.getMinutes();
+    minutes = addZero(minutes);
+
+    var hours = now.getHours();
+    hours = addZero(hours);
+    document.getElementById('timer').innerHTML = hours + ':' + minutes + ':' + seconds;
 </script>
 </body>
 </html>
