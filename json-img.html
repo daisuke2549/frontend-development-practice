@@ -14,10 +14,6 @@
 
     <div class="container">
         <div id="img_unit">
-            <div class="photo">
-                <img src="./img/img1.jpeg" alt="">
-                <div class="inner"><p>コメント1 <span>nickname</span></p></div>
-            </div>
         </div>
     </div>
     <script>
@@ -34,10 +30,28 @@
             }
 
         ];
-         // JSON = JavaScript object Notation, 構造化したデータを表すデータ記述言語の１種
 
-　　　　　var pref = ["北海道", "青森県", "岩手県"];
-        alert(pref[2]);
+        var img;
+        var caption;
+        var div;
+        img = document.createElement('img');
+        img.setAttribute('src', images[0].path);
+
+        caption = document.createElement('div');
+        caption.className = 'inner';
+        caption.innerHTML  = '<p>' + images[0].caption  + '<span>' + 
+        images[0].name + '<span></p>';
+        
+        div = document.createElement('div');
+        div.className = 'photo';
+        div.appendChild(img);
+        div.appendChild(caption);
+
+
+        document.getElementById('img_unit').appendChild(div);
+
+        //appendChild = 特定の親ノードの子ノードリストの末尾にノードを追加
+         // JSON = JavaScript object Notation, 構造化したデータを表すデータ記述言語の１種
 
     </script>
     
