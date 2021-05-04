@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=q, initial-scale=1.0">
+    <title>Vue.js</title>
+    <link rel="stylesheet" href="./css/json.css">
+</head>
+<body>
+    <header>
+        <h1>My Photos</h1>
+    </header>
+    <div class="container">
+        <div id="img_unit">
+            <div class="photo" v-for ="Photo in Photos">
+                <img :src="Photo.path" > 
+                <div class="inner"><p>{{Photo.caption}}<span>
+                    {{Photo.name}}</span></p></div>
+            </div>
+        </div>
+        <div id="vue_unit">
+            {{greeting}}<br>
+            {{message}}
+        </div>
+    </div>
+<!-- 
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+               {{ todo.text}}
+            </li>
+        </ol>
+    </div> -->
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#img_unit',
+            data: {
+                Photos: [
+
+                ]
+            },
+            created: function(){
+                var self = this;  //thisは対象のオブジェクトをさす。
+                $.getJSON('https://h2o-space.com/htmlbook/images.php', function
+                (data){
+                   self.Photos  = data;
+                });
+            }
+        });
+
+        //v-for = vue.jsのfor構文を使う(ループ)
+
+
+
+
+
+        // $('#img_unit').html('ここに画像リストが表示されます').css('margin-top', '100px');   //セレクター、メソッド、パラメーターの潤
+    
+            // alert('データを受信しました。')
+        //     for (var i=0; i <data.length; i++){
+        //         $('<div class="photo"></div>')
+        //         .append('<img src="' + data[i].path + '">')
+        //         .append('<div class="inner"><p>' + data[i].caption + '<span>' +
+        //                data[i].name + '</span></p></div>')
+        //         .appendTo('#img_unit');
+        //     }
+        // });
+
+        // var app = new Vue({
+        //     el:'#vue_unit',   //elでidを指定
+        //     data: {
+        //         message: 'Vue.jsで置き換えました。',
+        //         greeting: 'hello world'
+        //     }
+        // })
+
+        // var app4 = new Vue({
+        //     el:"#app-4",
+        //     data:{
+        //         todos: [
+        //             {text: 'JavaScript'},
+        //             {text: 'React'},
+        //             {text: 'Vue.js'},
+        //             {text: 'Angular'}
+        //         ]
+        //     }
+        // })
+
+
+    </script>
+</body>
+</html>
