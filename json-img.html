@@ -36,40 +36,71 @@
 
         ];
 
-        var img;
-        var caption;
-        var div;
+        // var img;
+        // var caption;
+        // var div;
 
-        for (var i = 0; i < images.length; i++){ //lengthで配列の長さを取得　　++インクリメント
+        // for (var i = 0; i < images.length; i++){ //lengthで配列の長さを取得　　++インクリメント
 
 
-        img = document.createElement('img');
-        img.setAttribute('src', images[i].path);
+        // img = document.createElement('img');
+        // img.setAttribute('src', images[i].path);
 
-        caption = document.createElement('div');
-        caption.className = 'inner';
-        caption.innerHTML  = '<p>' + images[i].caption  + '<span>' + 
-        images[i].name + '<span></p>';
+        // caption = document.createElement('div');
+        // caption.className = 'inner';
+        // caption.innerHTML  = '<p>' + images[i].caption  + '<span>' + 
+        // images[i].name + '<span></p>';
         
-        div = document.createElement('div');
-        div.className = 'photo';
-        div.appendChild(img);
-        div.appendChild(caption);
+        // div = document.createElement('div');
+        // div.className = 'photo';
+        // div.appendChild(img);
+        // div.appendChild(caption);
 
 
-        document.getElementById('img_unit').appendChild(div);
+        // document.getElementById('img_unit').appendChild(div);
 
         //appendChild = 特定の親ノードの子ノードリストの末尾にノードを追加
         // JSON = JavaScript object Notation, 構造化したデータを表すデータ記述言語の１種
-        }
+        // }
 
         
 
-        const clothing = ['shoes', 'shirts', 'socks', 'sweaters', 'apple', 'banana'];
+        // const clothing = ['shoes', 'shirts', 'socks', 'sweaters', 'apple', 'banana'];
 
-        for (i = 0; i < clothing.length; i++){
-            console.log(clothing[i]);
-        }
+        // for (i = 0; i < clothing.length; i++){
+        //     console.log(clothing[i]);
+        // }
+       
+       var ajax = new XMLHttpRequest();
+    //    alert(ajax.readyState);
+       ajax.open('GET', 'https://h2o-space.com/htmlbook/images.php');
+    //    alert(ajax.readyState);
+       ajax.responseType = 'json';
+       ajax.send(null); //sendでリクエストを送る
+
+
+       ajax.onreadystatechange = function(){
+           if(ajax.readyState === XMLHttpRequest.DONE && ajax.status === 200){  //論理演算子　　&& = かつ　 || または　　!　否定
+               for (var i = 0; i < this.response.length; i++){
+                   var data = this.response[i];
+
+                   var img = document.createElement('img');
+                   img.setAttribute('src', data.path);
+
+                   var caption = document.createElement('div');
+                   caption.className = 'inner';
+                   caption.innerHTML  = '<p>' + data.caption + '<span>' +
+                   data.name + '</span></p>';
+
+                   var div = document.createElement('div');
+                   div.className = 'photo';
+                   div.appendChild(img);
+                   div.appendChild(caption);
+
+                   document.getElementById('img_unit').appendChild(div);
+               }
+           }
+       };
 
 
 
