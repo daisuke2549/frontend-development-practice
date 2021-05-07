@@ -6,6 +6,7 @@ table.table2{
 table.table3{
     margin-top: 100px;
     margin:200px auto 1000px;
+    border-collapse: collapse;
 }
 
 
@@ -20,4 +21,20 @@ table.table3 th{
 table.table4{
    margin: 0 auto;
    border: 1px dotted ;
+   width:auto;
+}
+
+table.table5 {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+table.table5 th{
+    color:red;
+}
+
+.sample-sentence p{
+    color:blue;
+    line-height: 2.5;
 }
