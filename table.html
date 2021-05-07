@@ -5,14 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>table</title>
+    <link rel="stylesheet" href="./css/table.css">
 </head>
 <body>
+<table border = "3" class="table1">  
+   <tr>
+       <!-- rowspanで縦方向にセルを結合 -->
+       <td rowspan="3">結合セル</td>     
+       <td>セル</td>
+       <td>セル</td>
+   </tr>
+   <tr>
+    <td>セル</td>
+    <td>セル</td>
+    <td>セル</td>
+    <td>セル</td>
+    <td>セル</td>
+   </tr>
+   <tr>
+    <td>セル</td>
+    <td>セル</td>
+    <td colspan="3" style="text-align: center;">セル</td>
+   </tr>
+</table>
+
+<table  border="1"  class="table2">
+    <!-- captionタグでテーブルのタイトルを指定 -->
+    <caption>ドリンクメニュー</caption>
+     <tr>
+        <th>ホット/コールド</th>
+		<th>種類</th>
+		<th>サイズ</th>
+		<th>価格（円）</th>
+     </tr>
+     <tr>
+         <!-- rowspanで縦方向にセルを結合 -->
+		<th rowspan="3">ホット</th>
+		<td>コーヒー</td>
+		<td>S,M</td>
+		<td>150,200</td>
+	</tr>
+    <tr>
+        <td>レモンティ</td>
+        <td>Mサイズのみ</td>
+        <td>200</td>
+    </tr>
+	<tr>
+		<!-- 上のセルと結合して消えるセル -->
+		<td>紅茶</td>
+		<td>Sサイズのみ</td>
+		<td>170</td>
+	</tr>
+	<tr>
+		<th rowspan="4">コールド</th>
+		<td>コーラ</td>
+		<td colspan="2" style="text-align: center;">検討中</td>
+		colspanで横方向に結合
+	</tr>
+    <tr>
+        <td>ファンタ</td>
+        <td>S,M</td>
+        <td>100</td>
+    </tr>
+    <tr>
+        <td>メロンソーダ</td>
+        <td>S,M</td>
+        <td>250</td>
+    </tr>
+    <tr>
+        <td>サイダー</td>
+        <td colspan="2">今後販売予定</td>
+    </tr>
+</table>
 
 
 
 
-
-    
-    
 </body>
 </html>
