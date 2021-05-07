@@ -5,4 +5,19 @@ table.table2{
 
 table.table3{
     margin-top: 100px;
+    margin:200px auto 1000px;
+}
+
+
+table.table3 th{
+    background-color: grey;
+}
+
+.table-area{
+    margin:0 auto;
+}
+
+table.table4{
+   margin: 0 auto;
+   border: 1px dotted ;
 }
