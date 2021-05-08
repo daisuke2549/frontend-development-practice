@@ -1,0 +1,52 @@
+body{
+    margin:0;
+    min-height: 100vh;
+    background-color: greenyellow;
+    width:800px;
+    margin:0 auto;
+    font-size: 2rem;
+    display: grid;
+    grid-template: 
+    "header header header header header "  150px
+    "..... ..... ..... ..... ....."
+    "left ..... center  ..... right" 1fr
+    "..... ..... ..... ..... ....."
+    "footer footer footer footer footer" 300px / 150px 1fr 200px;
+    ;
+    /* gap:10px; */
+
+}
+header{
+    grid-area:header;
+}
+
+main{
+   grid-area: center;
+}
+
+nav{
+    grid-area: left;
+} 
+
+aside{
+    grid-area: right;
+}
+
+footer{
+    grid-area: footer;
+}
+
+/* 100vh */
+
+
+@media screen and (max-width: 1000px){
+    body{
+        grid-template:
+           "header" 150px
+           "center" 1fr
+           "left"   
+           "right"
+           "footer" 300px;
+    }
+
+}
