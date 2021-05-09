@@ -1,5 +1,5 @@
 
-for(var i = 0; i <100000000000; i++){
+for(var i = 0; i <100; i++){
     if(i === 4){
     continue;
    }
