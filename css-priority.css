@@ -1,0 +1,52 @@
+/* div#test span { color: red; }
+div span { color: blue; }
+span { color: green !important; } */
+body{
+    text-align: center;
+}
+
+.hoge{
+   width:200px;
+   height:200px;
+   margin: 0 auto;
+}
+
+.hoge.piko{
+    background-color: green;
+}
+
+.hoge{
+    background-color: red !important;
+}
+
+/* #i1{
+    color:red;
+}
+.c1{
+    color:blue;
+} */
+
+
+.c1 > .c2 {
+    color: red !important;
+}
+.c1 .c2 {
+    color:blue;
+}
+
+ul{
+    color:red;
+}
+
+ul li{
+   color:yellow;
+}
+p{
+    font-weight: bold;
+    color:black !important;
+}
+
+
+p#comment{
+    color:greenyellow;
+}

@@ -5,11 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS-priority</title>
+    <link rel="stylesheet" href="css-priority.css">
 </head>
 <body>
+<div id="test">
+    <span>Text</span>
+</div>
+
+<div class="hoge piko">
+</div>
 
 
+<!-- //よりタグに近い、より後から読み込まれたスタイルが優先される -->
+<p  class="c1"　id="i1">ピザ食べたい</p>
     
-    
+<p class="c1"><span class="c2">寿司食べたい</span></p>
+
+<div class="list">
+    <ul>
+        <li>リスト</li>
+        <li>リスト2</li>
+        <li>リスト3</li>
+    </ul>
+    <p id="comment">コメント</p>
+</div>
+
+
 </body>
 </html>
