@@ -1,0 +1,161 @@
+.table {
+    background: #efefef;
+  }
+  
+  .table__content {
+    margin-top: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  @media (max-width: 767px) {
+    .table__content {
+      display: block;
+      margin-top: 52px;
+    }
+  }
+  
+  .table__image {
+    width: 454px;
+    margin-right: 40px;
+    text-align: center;
+  }
+  
+  @media (max-width: 1247px) {
+    .table__image {
+      margin-right: 62px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .table__image {
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 32px;
+    }
+  }
+  .noborder {
+    border: 0px none;
+  }
+
+  
+  .table__price {
+    width: 704px;
+  }
+  
+  @media (max-width: 767px) {
+    .table__price {
+      width: 100%;
+    }
+  }
+  
+  .table-default {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #707070;
+    background: #fff;
+    table-layout: fixed;
+  }
+  .table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #707070;
+    background: #fff;
+    table-layout: fixed;
+  }
+  .table th,
+  .table td {
+    padding: 18px 24px;
+    border: 1px solid #707070;
+    vertical-align: middle;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .table th:first-child{
+      border: none;
+  }
+
+  .noborder {
+    border: 0px none;
+  }
+
+
+  
+  .table-default th,
+  .table-default td {
+    padding: 18px 24px;
+    border: 1px solid #707070;
+    vertical-align: middle;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  
+  @media (max-width: 767px) {
+    .table-default th,
+    .table-default td {
+      padding: 16px;
+    }
+  }
+  
+  .table-default th {
+    text-align: center;
+    background: #999;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .table-default th:first-child {
+    width: 170px;
+  }
+  
+  @media (max-width: 1247px) {
+    .table-default th:first-child {
+      width: 100px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .table-default th:first-child {
+      width: 80px;
+    }
+  }
+  
+  .table-default td {
+    text-align: right;
+  }
+  
+  .table-default td.table-default__multiline {
+    padding-top: 10px;
+    padding-bottom: 8px;
+  }
+  
+  .table-default td span.m-active {
+    color: #e81919;
+  }
+  
+  .table-default td span.m-small {
+    font-size: 0.825em;
+  }
+  
+  .table-default__attention {
+    font-size: 13px;
+  }
+  
+  .table__attention {
+    margin-top: 6px;
+    font-size: 14px;
+  }
+  
+  .table__attention a {
+    font-weight: 700;
+    color: #333;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+
+  table.table th:first-child{
+    border-right:none;
+}
